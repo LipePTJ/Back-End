@@ -19,29 +19,34 @@ public class ifElse {
 
 
         IO.print("Digite sua nota");
-        int nota = sc.nextInt();
-        if(nota < 3){
-            IO.println("Reprovado");
-        } else {
-            IO.println("reprovado");
-        }
+        int nota1 = sc.nextInt();
+
         IO.print("Digite sua nota");
         int nota2 = sc.nextInt();
-        if (nota2 <= 6){
+
+        IO.print("Digite sua nota");
+        int nota3 = sc.nextInt();
+
+        double media =(nota1 + nota2 + nota3) / 3;
+        System.out.println("A média aritmética é:" +media);
+        if (media < 4){
+            IO.println("Reprovado");
+        }
+        else if (media <= 6) {
             IO.println("Recuperação");
         } else {
             IO.println("Aprovado");
         }
-        IO.print("Digite sua nota");
-        int nota3 = sc.nextInt();
-        if (nota3 > 6){
-            IO.println("Aprovado");
-        } else {
-            IO.println("Reprovado");
-        }
 
-        double media = (nota + nota2 + nota3) / 3;
-        System.out.println("a media e:" + media);
+
+
+
+
+
+
+
+
+
 
 
 
