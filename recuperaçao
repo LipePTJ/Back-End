@@ -1,0 +1,85 @@
+import javax.swing.*;
+
+public class main {
+    public static void main(String[] args) {
+
+        JFrame janela = new JFrame("nome do produto");
+        janela.setSize(600,400);
+        janela.setLayout(null);
+
+        JButton button = new JButton("Cadastrar");
+        button.setBounds(20,180,150,40);
+
+        JButton button2 = new JButton("Limpar");
+        button2.setBounds(180,180,150,40);
+
+        JLabel label = new JLabel("Nome produto");
+        label.setBounds(20,80,150,40);
+
+        JTextField input = new JTextField();
+        input.setBounds(20,110,150,40);
+
+        JLabel label2 = new JLabel("preço");
+        label2.setBounds(190,80,150,40);
+
+        JTextField input2 = new JTextField();
+        input2.setBounds(190,110,150,40);
+
+        JLabel label3 = new JLabel("Quantidade");
+        label3.setBounds(360,80,150,40);
+
+        JTextField input3 = new JTextField();
+        input3.setBounds(360,110,150,40);
+
+        button.addActionListener( e -> {
+            String texto = input.getText();
+            String valor = input2.getText();
+            String quantidade = input3.getText();
+
+            if (texto.equals("")) {
+                JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+            } else if (valor.equals("")) {
+                JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+            } else if (quantidade.equals("")) {
+                JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+            } else {
+                JOptionPane.showMessageDialog(null, "Produto salvo com sucesso!\n" +
+                        "O produto é " + texto + " no valor de: " + valor + "\n" +
+                        "quantidade: " + quantidade + "\n" +
+                        "Valor total em estoque: R$ 100.00");
+            }
+        });
+
+        button2.addActionListener( e -> {
+            input.setText("");
+            input2.setText("");
+            input3.setText("");
+        });
+
+        janela.add(label);
+        janela.add(label2);
+        janela.add(label3);
+
+        janela.add(input);
+        janela.add(input2);
+        janela.add(input3);
+
+        janela.add(button);
+        janela.add(button2);
+
+        janela.setVisible(true);
+
+    }
+}
+
+//perguntas
+
+// JLabel É o texto fixo
+
+// JTextField É a caixa de entrada
+
+// JButton É o botão
+
+// addActionListener e oque faz o botão funcionar
+
+// o codigo pega o valor e a quantidade e usa *
